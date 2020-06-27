@@ -61,10 +61,10 @@ namespace Hazel {
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	/*class HAZEL_API KeyTypedEvent : public KeyEvent
+	class HAZEL_API KeyTypedEvent : public KeyEvent
 	{
 	public:
-		KeyTypedEvent(KeyCode keycode)
+		KeyTypedEvent(int keycode)
 			: KeyEvent(keycode) {}
 
 		std::string ToString() const override
@@ -75,5 +75,5 @@ namespace Hazel {
 		}
 
 		EVENT_CLASS_TYPE(KeyTyped)
-	};*/
+	};
 }
