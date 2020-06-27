@@ -39,6 +39,6 @@ namespace Hazel {
 		};
 
 		WindowData m_Data;
-
 	};
+
 }

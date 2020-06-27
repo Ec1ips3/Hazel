@@ -2,8 +2,8 @@
 #include "WindowsWindow.h"
 
 #include "Hazel/Events/ApplicationEvent.h"
-#include "Hazel/Events/KeyEvent.h"
 #include "Hazel/Events/MouseEvent.h"
+#include "Hazel/Events/KeyEvent.h"
 
 #include <glad/glad.h>
 
@@ -37,13 +37,13 @@ namespace Hazel {
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
 
-		HZ_CORE_INFO("Creating window {0} {1}, {2})", props.Title, props.Width, props.Height);
+		HZ_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
 		if (!s_GLFWInitialized)
 		{
-			// TODO: glfwTerminate on sytem shutdown
+			// TODO: glfwTerminate on system shutdown
 			int success = glfwInit();
-			HZ_CORE_ASSERT(success, "Could not initialize GLFW!");
+			HZ_CORE_ASSERT(success, "Could not intialize GLFW!");
 			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
@@ -171,4 +171,5 @@ namespace Hazel {
 	{
 		return m_Data.VSync;
 	}
+
 }
